@@ -63,3 +63,13 @@ services:
     networks:
       - back-tier
       - front-tier
+
+source:
+    image: containerize/git
+    environment: 
+      - REPO_LOCAL=/data/git/repos/prometheus
+      - REPO_BRANCH=master
+      - REPO_REMOTE=https://github.com/vegasbrianc/crypto-currency-tracker.git
+    tty: true
+    volumes: 
+      - prometheus_config_data:/data/git/repos/prometheus/prometheus
