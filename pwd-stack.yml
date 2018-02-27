@@ -23,13 +23,8 @@ services:
       - '--web.console.templates=/usr/share/prometheus/consoles'
     ports:
       - 9090:9090
-    links:
-      - cadvisor:cadvisor
-      - alertmanager:alertmanager
-    depends_on:
-      - cadvisor
     networks:
-      - back-tier
+      - front-tier
     restart: always
     deploy:
       placement:
@@ -61,7 +56,6 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=foobar
       - GF_USERS_ALLOW_SIGN_UP=false
     networks:
-      - back-tier
       - front-tier
 
 source:
