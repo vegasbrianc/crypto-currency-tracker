@@ -12,6 +12,9 @@
 
 This is a project that utilizes [Prometheus](http://prometheus.io/), [Grafana](www.grafana.org), and the [CoinMarketCap Prometheus Exporter](https://github.com/bonovoxly/coinmarketcap-exporter).
 
+<img src="https://raw.githubusercontent.com/vegasbrianc/crypto-currency-tracker/master/img/crypto-currency-tracker-dashboard.png" width="400" heighth="400">
+
+
 ## Crypto Currency Tracker Quickstart
 
 Can't be bothered with setting up Docker to test it out? You are in luck. We created a quickstart using Play-With-Docker (PWD) to start-up the Crypto-Currency Tracker stack inside the Play-With-Docker infrastrucutre so you can try it out. This will allow you to quickly test the stack to see if it meets your needs. 
@@ -62,18 +65,11 @@ Now we need to create the Prometheus Datasource in order to connect Grafana to P
 <img src="https://github.com/vegasbrianc/prometheus/raw/version-2/images/Add_Data_Source.png" width="400" heighth="400">
 
 ## Install Dashboard
-I updated the projects Dashboard to add a little bit more flair. You can have a look at the dashboard [Grafana Docker Dashboard](https://grafana.net/dashboards/3890)
+I updated the projects Dashboard to add a little bit more flair. You can have a look at the dashboard [Grafana Docker Dashboard](https://grafana.net/dashboards/4893) Simply download the dashboard and select from the Grafana menu -> Dashboards -> Import and use the Dashboard ID `4893`
 
 The original project creator [bonovoxly](https://twitter.com/bonovoxly) created a nice dashboard available on [Grafana Docker Dashboard](https://grafana.net/dashboards/3890). Simply download the dashboard and select from the Grafana menu -> Dashboards -> Import and use the Dashboard ID `3890`
 
-This dashboard is intended to help you get started with monitoring. If you have any changes you would like to see in the Dashboard let me know so I can update Grafana site as well.
-
-Here's the Dashboard Template
-
-![Grafana Dashboard](https://github.com/vegasbrianc/prometheus/raw/version-2/images/Dashboard.png)
-
-Grafana Dashboard - `dashboards/Grana_Dashboad.json`
-Alerting Dashboard - `dashboards/System_Monitoring.json`
+<img src="https://raw.githubusercontent.com/vegasbrianc/crypto-currency-tracker/master/img/crypto-currency-tracker-dashboard.png" width="400" heighth="400">
 
 # Security Considerations
 This project is intended to be a quick-start to get up and running with Docker and Prometheus. Security has not been implemented in this project. It is the users responsability to implement Firewall/IpTables and SSL.
