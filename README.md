@@ -33,7 +33,7 @@ If you would like to change which targets should be monitored or make configurat
 
 Once configurations are done let's start it up. From the /prometheus project directory run the following command:
 
-    $ HOSTNAME=$(hostname) docker stack deploy -c docker-compose.yml prom
+    $ HOSTNAME=$(hostname) docker stack deploy -c docker-compose.yml crypto
 
 
 That's it the `docker stack deploy' command deploys the entire Grafana and Prometheus stack automagically to the Docker Swarm. By default cAdvisor and node-exporter are set to Global deployment which means they will propogate to every docker host attached to the Swarm.
@@ -45,7 +45,7 @@ The Grafana Dashboard is now accessible via: `http://<Host IP Address>:3000` for
 
 In order to check the status of the newly created stack:
     
-    $ docker stack ps prom
+    $ docker stack ps crypto
 
 View running services:
 
@@ -53,7 +53,7 @@ View running services:
 
 View logs for a specific service
   
-    $ docker service logs prom_<service_name>
+    $ docker service logs crypto_<service_name>
 
 ## Post Configuration
 
