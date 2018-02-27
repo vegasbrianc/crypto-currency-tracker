@@ -7,10 +7,8 @@ volumes:
 
 networks:
   front-tier:
-  back-tier:
 
 services:
-
   prometheus:
     image: prom/prometheus:v2.0.0
     volumes:
@@ -58,7 +56,7 @@ services:
     networks:
       - front-tier
 
-source:
+  source:
     image: containerize/git
     environment: 
       - REPO_LOCAL=/data/git/repos/prometheus
