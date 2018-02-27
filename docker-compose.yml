@@ -24,21 +24,21 @@ services:
     networks:
       - front-tier
     restart: always
-    deploy:
-      placement:
-        constraints:
-          - node.hostname == ${HOSTNAME}
+#    deploy:
+#      placement:
+#        constraints:
+#          - node.hostname == ${HOSTNAME}
 
   coinmarketcap-exporter:
     image: bcawthra/coinmarketcap-exporter:latest
     deploy:
-      placement:
-        constraints:
-          - node.hostname == ${HOSTNAME}
+#      placement:
+#        constraints:
+#          - node.hostname == ${HOSTNAME}
     ports:
         - 9101:9101
     networks:
-        - prom_front-tier
+        - front-tier
     restart: always
 
 
