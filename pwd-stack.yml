@@ -44,7 +44,7 @@ services:
   source:
     image: containerize/git
     environment: 
-      - REPO_LOCAL=/data/git/repos/crypto
+      - REPO_LOCAL=/data/git/repos/prometheus
       - REPO_BRANCH=master
       - REPO_REMOTE=https://github.com/vegasbrianc/crypto-currency-tracker.git
     tty: true
