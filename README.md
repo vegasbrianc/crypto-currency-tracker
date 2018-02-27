@@ -12,7 +12,7 @@
 
 This is a project that utilizes [Prometheus](http://prometheus.io/), [Grafana](www.grafana.org), and the [CoinMarketCap Prometheus Exporter](https://github.com/bonovoxly/coinmarketcap-exporter).
 
-<img src="https://raw.githubusercontent.com/vegasbrianc/crypto-currency-tracker/master/img/crypto-currency-tracker-dashboard.png" width="400" heighth="400">
+<img src="https://raw.githubusercontent.com/vegasbrianc/crypto-currency-tracker/master/img/crypto-currency-tracker-dashboard.png" width="600" heighth="400">
 
 
 ## Crypto Currency Tracker Quickstart
@@ -36,7 +36,7 @@ Once configurations are done let's start it up. From the /prometheus project dir
     $ HOSTNAME=$(hostname) docker stack deploy -c docker-compose.yml crypto
 
 
-That's it the `docker stack deploy' command deploys the entire Grafana and Prometheus stack automagically to the Docker Swarm. By default cAdvisor and node-exporter are set to Global deployment which means they will propogate to every docker host attached to the Swarm.
+That's it the `docker stack deploy` command deploys the entire Grafana and Prometheus stack automagically to the Docker Swarm. By default cAdvisor and node-exporter are set to Global deployment which means they will propogate to every docker host attached to the Swarm.
 
 The Grafana Dashboard is now accessible via: `http://<Host IP Address>:3000` for example http://192.168.10.1:3000
 
@@ -62,7 +62,7 @@ Now we need to create the Prometheus Datasource in order to connect Grafana to P
 * Click `Data Sources`
 * Click the green button `Add Data Source`.
 
-<img src="https://github.com/vegasbrianc/prometheus/raw/version-2/images/Add_Data_Source.png" width="400" heighth="400">
+<img src="https://github.com/vegasbrianc/prometheus/raw/version-2/images/Add_Data_Source.png" width="600" heighth="400">
 
 ## Install Dashboard
 I updated the projects Dashboard to add a little bit more flair. You can have a look at the dashboard [Grafana Docker Dashboard](https://grafana.net/dashboards/4893) Simply download the dashboard and select from the Grafana menu -> Dashboards -> Import and use the Dashboard ID `4893`
