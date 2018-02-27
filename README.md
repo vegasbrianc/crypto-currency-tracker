@@ -1,4 +1,4 @@
-# Contents
+# A Crypto Currency tracker using Prometheus and Grafana
 
 - Introduction
   - [Overview](#a-crypto-currency-tracker-using-prometheus-and-grafana)
@@ -9,7 +9,6 @@
   	- [Install Dashboard](#install-dashboard)
   - [Security Considerations](#security-considerations)
 
-# A Crypto Currency tracker using Prometheus and Grafana
 
 This is a project that utilizes [Prometheus](http://prometheus.io/), [Grafana](www.grafana.org), and the [CoinMarketCap Prometheus Exporter](https://github.com/bonovoxly/coinmarketcap-exporter).
 
@@ -63,7 +62,9 @@ Now we need to create the Prometheus Datasource in order to connect Grafana to P
 <img src="https://github.com/vegasbrianc/prometheus/raw/version-2/images/Add_Data_Source.png" width="400" heighth="400">
 
 ## Install Dashboard
-I created a Dashboard template which is available on [Grafana Docker Dashboard](https://grafana.net/dashboards/179). Simply download the dashboard and select from the Grafana menu -> Dashboards -> Import
+I updated the projects Dashboard to add a little bit more flair. You can have a look at the dashboard [Grafana Docker Dashboard](https://grafana.net/dashboards/3890)
+
+The original project creator [bonovoxly](https://twitter.com/bonovoxly) created a nice dashboard available on [Grafana Docker Dashboard](https://grafana.net/dashboards/3890). Simply download the dashboard and select from the Grafana menu -> Dashboards -> Import and use the Dashboard ID `3890`
 
 This dashboard is intended to help you get started with monitoring. If you have any changes you would like to see in the Dashboard let me know so I can update Grafana site as well.
 
