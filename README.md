@@ -19,7 +19,7 @@ This is a project that utilizes [Prometheus](http://prometheus.io/), [Grafana](w
 
 Can't be bothered with setting up Docker to test it out? You are in luck. We created a quickstart using Play-With-Docker (PWD) to start-up the Crypto-Currency Tracker stack inside the Play-With-Docker infrastrucutre so you can try it out. This will allow you to quickly test the stack to see if it meets your needs. 
 
-[![Try in PWD](https://github.com/play-with-docker/stacks/raw/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/vegasbrianc/prometheus/version-2/pwd-stack.yml) 
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/vegasbrianc/crypto-currency-tracker/master/pwd-stack.yml) 
 
 # Pre-requisites
 
