@@ -5,7 +5,8 @@
 	- [Crypto Currency Tracker Quickstart](#crypto-currency-tracker-quickstart)
   - [Pre-requisites](#pre-requisites)
   - [Installation & Configuration](#installation--configuration)
-  	- [Post Configuration](#post-configuration)
+    - [Check Stack Status](#check-status)
+  	- [Grafana Configuration](#grafana-configuration)
   	- [Install Dashboard](#install-dashboard)
   - [Security Considerations](#security-considerations)
 
@@ -29,33 +30,34 @@ Before we get started installing the Prometheus stack. Ensure you install the la
 
 Clone the project locally to your Docker host. 
 
-If you would like to change which targets should be monitored or make configuration changes edit the [/prometheus/prometheus.yml](https://github.com/vegasbrianc/prometheus/blob/version-2/prometheus/prometheus.yml) file. The targets section is where you define what should be monitored by Prometheus. The names defined in this file are actually sourced from the service name in the docker-compose file. If you wish to change names of the services you can add the "container_name" parameter in the `docker-compose.yml` file.
-
-Once configurations are done let's start it up. From the /prometheus project directory run the following command:
+Change to the `crypto-currency-tracker` directory and run the following command:
 
     $ HOSTNAME=$(hostname) docker stack deploy -c docker-compose.yml crypto
 
+That’s it the docker stack deploy command deploys the entire Docker, Prometheus, Grafana and CoinMarketCap stack automagically to the Docker Swarm. 
+Wait a minute for everything to download and install
 
-That's it the `docker stack deploy` command deploys the entire Grafana and Prometheus stack automagically to the Docker Swarm. By default cAdvisor and node-exporter are set to Global deployment which means they will propogate to every docker host attached to the Swarm.
 
-The Grafana Dashboard is now accessible via: `http://<Host IP Address>:3000` for example http://192.168.10.1:3000
-
-	username - admin
-	password - foobar (Password is stored in the `config.monitoring` env file)
+## Check the Status
 
 In order to check the status of the newly created stack:
-    
+  
     $ docker stack ps crypto
 
 View running services:
-
+    
     $ docker service ls
 
 View logs for a specific service
-  
+
     $ docker service logs crypto_<service_name>
 
-## Post Configuration
+## Grafana Configuration
+
+The Grafana Dashboard is now accessible via: `http://<Host IP Address>:3000` for example http://192.168.10.1:3000
+
+    username - admin
+    password - foobar (Password is stored in the `config.monitoring` env file)
 
 Now we need to create the Prometheus Datasource in order to connect Grafana to Prometheus 
 * Click the `Grafana` Menu at the top left corner (looks like a fireball)
@@ -69,7 +71,7 @@ I updated the projects Dashboard to add a little bit more flair. You can have a 
 
 The original project creator [bonovoxly](https://twitter.com/bonovoxly) created a nice dashboard available on [Grafana Docker Dashboard](https://grafana.net/dashboards/3890). Simply download the dashboard and select from the Grafana menu -> Dashboards -> Import and use the Dashboard ID `3890`
 
-<img src="https://raw.githubusercontent.com/vegasbrianc/crypto-currency-tracker/master/img/crypto-currency-tracker-dashboard.png" width="400" heighth="400">
+<img src="https://raw.githubusercontent.com/vegasbrianc/crypto-currency-tracker/master/img/crypto-currency-tracker-dashboard.png" width="600" heighth="400">
 
 # Security Considerations
 This project is intended to be a quick-start to get up and running with Docker and Prometheus. Security has not been implemented in this project. It is the users responsability to implement Firewall/IpTables and SSL.
