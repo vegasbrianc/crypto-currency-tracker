@@ -62,18 +62,20 @@ The Grafana Dashboard is now accessible via: `http://<Host IP Address>:3000` for
 Now we need to create the Prometheus Datasource in order to connect Grafana to Prometheus 
 * Click the `Grafana` Menu at the top left corner (looks like a fireball)
 * Click `Data Sources`
-* Click the green button `Add Data Source`.
+* Click the green button `Add Data Source`
+
+Add the datasource exactly as the screenshot below:
 
 <img src="https://github.com/vegasbrianc/prometheus/raw/version-2/images/Add_Data_Source.png" width="600" heighth="400">
 
 ## Install Dashboard
-I updated the projects Dashboard to add a little bit more flair. You can have a look at the dashboard [Grafana Docker Dashboard](https://grafana.net/dashboards/4893) Simply download the dashboard and select from the Grafana menu -> Dashboards -> Import and use the Dashboard ID `4893`
+I updated the projects Dashboard to add a little bit more flair. You can have a look at the dashboard [Grafana Docker Dashboard](https://grafana.net/dashboards/4893) To install, simply import the dashboard and select from the Grafana menu -> Dashboards -> Import and use the Dashboard ID `4893 and select `prometheus` as the datasource.
 
 The original project creator [bonovoxly](https://twitter.com/bonovoxly) created a nice dashboard available on [Grafana Docker Dashboard](https://grafana.net/dashboards/3890). Simply download the dashboard and select from the Grafana menu -> Dashboards -> Import and use the Dashboard ID `3890`
 
 <img src="https://raw.githubusercontent.com/vegasbrianc/crypto-currency-tracker/master/img/crypto-currency-tracker-dashboard.png" width="600" heighth="400">
 
 # Security Considerations
-This project is intended to be a quick-start to get up and running with Docker and Prometheus. Security has not been implemented in this project. It is the users responsability to implement Firewall/IpTables and SSL.
+This project is intended to be a quick-start to get up and running monitoring Crypto Currencies with Docker, Prometheus, and Grafana. Security has not been implemented in this project. It is the users responsibility to implement Firewall/IpTables, SSL, and access control.
 
 Since this is a template to get started Prometheus and Alerting services are exposing their ports to allow for easy troubleshooting and understanding of how the stack works.
