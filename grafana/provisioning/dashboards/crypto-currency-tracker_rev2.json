@@ -1,7 +1,7 @@
 {
   "__inputs": [
     {
-      "name": "DS_PROMETHEUS",
+      "name": "prometheus",
       "label": "prometheus",
       "description": "",
       "type": "datasource",
@@ -71,7 +71,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "decimals": 3,
       "format": "currencyUSD",
       "gauge": {
@@ -131,7 +131,7 @@
           "refId": "A"
         }
       ],
-      "thresholds": "",
+      "thresholprometheus": "",
       "title": "$name - USD",
       "type": "singlestat",
       "valueFontSize": "80%",
@@ -153,7 +153,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "decimals": 2,
       "format": "percentunit",
       "gauge": {
@@ -213,7 +213,7 @@
           "refId": "A"
         }
       ],
-      "thresholds": "0,0",
+      "thresholprometheus": "0,0",
       "title": "$name - Percent Change in USD",
       "type": "singlestat",
       "valueFontSize": "80%",
@@ -235,7 +235,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "decimals": 3,
       "format": "currencyUSD",
       "gauge": {
@@ -295,7 +295,7 @@
           "refId": "A"
         }
       ],
-      "thresholds": "",
+      "thresholprometheus": "",
       "title": "$name - Price in Bitcoin",
       "type": "singlestat",
       "valueFontSize": "80%",
@@ -317,7 +317,7 @@
         "#f9e2d2",
         "#299c46"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "decimals": 2,
       "format": "percentunit",
       "gauge": {
@@ -377,7 +377,7 @@
           "refId": "A"
         }
       ],
-      "thresholds": "-0.01,0.01",
+      "thresholprometheus": "-0.01,0.01",
       "title": "$name - Percent Change in BTC",
       "type": "singlestat",
       "valueFontSize": "80%",
@@ -399,7 +399,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "decimals": 3,
       "format": "short",
       "gauge": {
@@ -459,7 +459,7 @@
           "refId": "A"
         }
       ],
-      "thresholds": "",
+      "thresholprometheus": "",
       "title": "$name - Volume",
       "type": "singlestat",
       "valueFontSize": "80%",
@@ -481,7 +481,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "decimals": 3,
       "format": "currencyUSD",
       "gauge": {
@@ -541,7 +541,7 @@
           "refId": "A"
         }
       ],
-      "thresholds": "",
+      "thresholprometheus": "",
       "title": "$name - Market Cap",
       "type": "singlestat",
       "valueFontSize": "80%",
@@ -555,7 +555,7 @@
       "valueName": "current"
     },
     {
-      "cards": {
+      "carprometheus": {
         "cardPadding": null,
         "cardRound": null
       },
@@ -568,7 +568,7 @@
         "mode": "spectrum"
       },
       "dataFormat": "timeseries",
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "gridPos": {
         "h": 7,
         "w": 12,
@@ -576,7 +576,7 @@
         "y": 7
       },
       "heatmap": {},
-      "highlightCards": true,
+      "highlightCarprometheus": true,
       "id": 20,
       "legend": {
         "show": false
@@ -620,7 +620,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fill": 1,
       "gridPos": {
         "h": 7,
@@ -666,7 +666,7 @@
           "refId": "B"
         }
       ],
-      "thresholds": [],
+      "thresholprometheus": [],
       "timeFrom": null,
       "timeShift": null,
       "title": "$name Price in Bitcoin",
@@ -707,7 +707,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fill": 1,
       "gridPos": {
         "h": 7,
@@ -746,7 +746,7 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
+      "thresholprometheus": [],
       "timeFrom": null,
       "timeShift": null,
       "title": "$name Price in USD",
@@ -787,7 +787,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fill": 1,
       "gridPos": {
         "h": 7,
@@ -826,7 +826,7 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
+      "thresholprometheus": [],
       "timeFrom": null,
       "timeShift": null,
       "title": "$name Difference in BTC price from 24 hours ago",
@@ -867,7 +867,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fill": 1,
       "gridPos": {
         "h": 7,
@@ -906,7 +906,7 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
+      "thresholprometheus": [],
       "timeFrom": null,
       "timeShift": null,
       "title": "$name Price Difference in USD from 24 hours ago",
@@ -947,7 +947,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fill": 1,
       "gridPos": {
         "h": 9,
@@ -986,7 +986,7 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
+      "thresholprometheus": [],
       "timeFrom": null,
       "timeShift": null,
       "title": "Top 5 biggest % Change in 24 Hours",
@@ -1027,7 +1027,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "prometheus",
       "fill": 1,
       "gridPos": {
         "h": 9,
@@ -1115,7 +1115,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_PROMETHEUS}",
+        "datasource": "prometheus",
         "hide": 0,
         "includeAll": false,
         "label": "name",
