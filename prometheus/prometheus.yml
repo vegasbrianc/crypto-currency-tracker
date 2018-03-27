@@ -37,7 +37,7 @@ scrape_configs:
 
     dns_sd_configs:
     - names:
-      - 'tasks.coinmarketcap-exporter'
+      - 'coinmarketcap-exporter'
       type: 'A'
       port: 9101
     
